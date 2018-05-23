@@ -16,14 +16,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Call;
-import okhttp3.Headers;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import expolib_v1.okhttp3.Call;
+import expolib_v1.okhttp3.Headers;
+import expolib_v1.okhttp3.MediaType;
+import expolib_v1.okhttp3.MultipartBody;
+import expolib_v1.okhttp3.OkHttpClient;
+import expolib_v1.okhttp3.Request;
+import expolib_v1.okhttp3.RequestBody;
+import expolib_v1.okhttp3.Response;
 
 /**
  * Created by pkwak on 11/15/16.
@@ -125,7 +125,7 @@ public class RNFetchBlobService extends IntentService implements ProgressListene
                 .build();
 
         final Call call =  client.newCall(builder.build());
-        call.enqueue(new okhttp3.Callback() {
+        call.enqueue(new expolib_v1.okhttp3.Callback() {
 
             @Override
             public void onFailure(Call call, IOException e) {
